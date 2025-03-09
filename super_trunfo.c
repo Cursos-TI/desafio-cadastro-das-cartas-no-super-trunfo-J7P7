@@ -56,7 +56,7 @@ int main() {
     printf("o pib da sua cidade e:%.2f%s \n", pib,"bilhões de reais");
     printf("a quantidade de pontos turisticos da sua cidade e:%d \n", pontos);
 
-//TODOS OS COMENTARIOS ANTERIOMENTE VISTOS SE APLICAM A ESSSA NOVA PARTE DO CODIGO
+//TODOS OS COMENTARIOS ANTERIOMENTE VISTOS SE APLICAM A ESSA NOVA PARTE DO CODIGO
     
     printf("agora vamos cadastrar a segunda carta \n");
 
