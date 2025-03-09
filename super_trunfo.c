@@ -1,7 +1,3 @@
-
-V 000.1
-
-#define _CRT_SECURE_NO_WARNINGS //esse codigo e mais utilisado no visual studio 
 #include <stdio.h>
 
 int main() {
@@ -101,5 +97,6 @@ int main() {
 
     return 0;
 }
+
 
 
