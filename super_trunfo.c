@@ -97,6 +97,8 @@ printf("A quantidade de pontos turisticos da sua cidade e: %d \n", pontos2);
 
 printf("agora vamos para proxima etapa (FIM)");
 
+peintf("DEUS SEJA LOUVADO \n");
+
 return 0;
 
 }
