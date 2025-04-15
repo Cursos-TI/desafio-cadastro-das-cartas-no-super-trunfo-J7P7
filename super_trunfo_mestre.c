@@ -8,8 +8,8 @@ int main() {
 
 	// Aqui serão salvos os dados que o usuário ira disponibilizar.
 	char letra[50], codigo[50], nome[50], letra2[50], codigo2[50], nome2[50], menu, nome01[50], nome02[50]; //char me permite usar strings.
-	int populacao = 0, pontos = 0, populacao2 = 0, pontos2 = 0, menu2, menu1, menu01, menu02 = 0, pc = 0, pc2, pc1;  //int me permite usar numeros inteiros.
-	float areakm2 = 0, denssidade = 0, pib = 0, areakm22 = 0, denssidade2 = 0, pib2 = 0;//float me permite usar numereos decimais.
+	int populacao = 0, pontos = 0, populacao2 = 0, pontos2 = 0, menu2, menu1, menu01, menu02 = 0, pc = 0, pc2 = 0, pc1 = 0;  //int me permite usar numeros inteiros.
+	float areakm2 = 0, denssidade = 0, pib = 0, areakm22 = 0, denssidade2 = 0, pib2 = 0,soma01 = 0, soma02 = 0;//float me permite usar numereos decimais.
 
 
 
@@ -77,48 +77,62 @@ int main() {
 		srand(time(0));
 		pc = rand() % 5 + 1;
 		// atributo
-		srand(time(0));
 		pc1 = rand() % 5 + 1;
 
 
 		printf("\n");
 		printf("ATRIBUTOS ESCOLHIDOS\n");
-		if (pc == pc1) {
-			printf("o oponente so escolheu um atributo\n");
-		}
 		
+		if (pc == pc1) {
+			printf("o oponente escolheu apenas um atributo\n");
+			
+			if (pc1 == 1) {
+				printf("o oponete escolheu o atributo populaçao\n");
+			}
+			else if (pc1 == 2) {
+				printf("o oponente escolheu o atributo areakm2\n");
+			}
+			else if (pc1 == 3) {
+				printf("o oponete escolheu o atributo pib\n");
+			}
+			else if (pc1 == 4) {
+				printf("o oponente escoolheu o atributo numero de pontos turisticos\n");
+			}
+			else if (pc1 == 5) {
+				printf("o oponente escolheu o atributo denssidade demografica\n");
+			}
+		}
 		else {
-
-	    if (pc == 1) {
-			printf("o oponete escolheu o atributo populaçao\n");
-		}
-		else if (pc == 2) {
-			printf("o oponente escolheu escolheu o atributo areakm2\n");
-		}
-		else if (pc == 3) {
-			printf("o oponete escolheu o atributo pib\n");
-		}
-		else if (pc == 4) {
-			printf("o oponente escoolheu o atributo numero de pontos turisticos\n");
-		}
-		else if (pc == 5) {
-			printf("o oponente escolheu o atributo denssidade demografica\n");
-		}
-		if (pc1 == 1) {
-			printf("o oponete escolheu o atributo populaçao\n");
-		}
-		else if (pc1 == 2) {
-			printf("o oponente escolheu escolheu o atributo areakm2\n");
-		}
-		else if (pc1 == 3) {
-			printf("o oponete escolheu o atributo pib\n");
-		}
-		else if (pc1 == 4) {
-			printf("o oponente escoolheu o atributo numero de pontos turisticos\n");
-		}
-		else if (pc1 == 5) {
-			printf("o oponente escolheu o atributo denssidade demografica\n");
-		}
+			if (pc == 1) {
+				printf("o oponete escolheu o atributo populaçao\n");
+			}
+			else if (pc == 2) {
+				printf("o oponente escolheu escolheu o atributo areakm2\n");
+			}
+			else if (pc == 3) {
+				printf("o oponete escolheu o atributo pib\n");
+			}
+			else if (pc == 4) {
+				printf("o oponente escoolheu o atributo numero de pontos turisticos\n");
+			}
+			else if (pc == 5) {
+				printf("o oponente escolheu o atributo denssidade demografica\n");
+			}
+			if (pc1 == 1) {
+				printf("o oponete escolheu o atributo populaçao\n");
+			}
+			else if (pc1 == 2) {
+				printf("o oponente escolheu o atributo areakm2\n");
+			}
+			else if (pc1 == 3) {
+				printf("o oponete escolheu o atributo pib\n");
+			}
+			else if (pc1 == 4) {
+				printf("o oponente escoolheu o atributo numero de pontos turisticos\n");
+			}
+			else if (pc1 == 5) {
+				printf("o oponente escolheu o atributo denssidade demografica\n");
+			}
 		}
 
 		///////////////////////////////////////////////////////////////////////////////////////////////
@@ -164,23 +178,25 @@ int main() {
 			printf("opçao invalida\n");
 		}
 		else {
+
 			if (menu01 == 1) {
-				printf("voce escolheu o atributo populaçao\n");
+				printf("voce escolheu o atributo populaçao:%.2f\n",soma01 = populacao);
 			}
 			else if (menu01 == 2) {
-				printf("voce escolheu o atributo areakm2\n");
+				printf("voce escolheu o atributo areakm2:%.2f\n",soma01 = areakm2);
 			}
 			else if (menu01 == 3) {
-				printf("voce escolheu o atributo pib\n");
+				printf("voce escolheu o atributo pib:%.2f\n",soma01 = pib);
 			}
 			else if (menu01 == 4) {
-				printf("voce escolheu o atributo pontos turisticos\n");
+				printf("voce escolheu o atributo pontos turisticos:%.2f\n",soma01 = pontos);
 			}
 			else if (menu01 == 5) {
-				printf("voce escolheu o atributo dessidade demografica\n");
+				printf("voce escolheu o atributo denssidade demografica:%.2f\n",soma01 = denssidade);
 			}
+
 		}
-		
+
 		printf("voce quer adicionar outro atributo? se sim digite o numero da opçao se nao digite 10\n");
 		printf("1 para populaçao\n");
 		printf("2 para areakm2\n");
@@ -188,122 +204,450 @@ int main() {
 		printf("4 para numero de pontos turisticosn\n");
 		printf("5 para denssidade demografica\n\n");
 		scanf("%d", &menu02);
-		
 
-		
-			if (menu02 == menu01) {
-				printf("opçao invalida pois voce ja escolheu esse atributo");
-				break;
+
+
+		if (menu02 == menu01) {
+			printf("opçao invalida pois voce ja escolheu esse atributo");
+			break;
+		}
+		else if (menu02 == 10) {
+
+
+			printf("\n");
+			printf("%s", nome01);
+			printf("\n");
+
+			if (menu02 == 1) {
+				printf("voce escolheu o atributo populaçao:%d\n", populacao);
 			}
-			 if (menu02 == 10){
-				
-				 if (denssidade < denssidade2 || populacao + areakm2 + pib + pontos >  populacao2 + areakm22 + pib2 + pontos2) {
-					printf("voce ganhou\n");
-				}
-				else if (denssidade > denssidade2 || populacao + areakm2 + pib + pontos < populacao2 + areakm22 + pib2 + pontos2) {
-					printf("voce perdeu\n");
-				}
-				else {
-					printf("empate");
-				}
-				 break;
-			 }
-			
-			 
-			
-				 printf("\n");
-				 printf("%s", nome01);
-				 printf("\n");
+			else if (menu02 == 2) {
+				printf("voce escolheu o atributo areakm2:%f\n", areakm2);
+			}
+			else if (menu02 == 3) {
+				printf("voce escolheu o atributo pib:%f\n", pib);
+			}
+			else if (menu02 == 4) {
+				printf("voce escolheu o atributo pontos turisticos:%d\n", pontos);
+			}
+			else if (menu02 == 5) {
+				printf("voce escolheu o atributo dessidade demografica:%f\n", denssidade);
+			}
+			if (menu01 == 1) {
+				printf("voce escolheu o atributo populaçao:%d\n", populacao);
+			}
+			else if (menu01 == 2) {
+				printf("voce escolheu o atributo areakm2:%.2f\n", areakm2);
+			}
+			else if (menu01 == 3) {
+				printf("voce escolheu o atributo pib:%.2f\n", pib);
+			}
+			else if (menu01 == 4) {
+				printf("voce escolheu o atributo pontos turisticos:%d\n", pontos);
+			}
+			else if (menu01 == 5) {
+				printf("voce escolheu o atributo denssidade demografica:%f\n", denssidade);
+			}
+			if (menu01 == 1 && menu02 == 2) {
+				printf("a soma dos atributos e:%.2f\n", soma01 = populacao + areakm2);
+			}
+			if (menu01 == 1 && menu02 == 3) {
+				printf("a soma dos atributos e:%.2f\n", soma01 = populacao + pib);
+			}
+			if (menu01 == 1 && menu02 == 4) {
+				printf("a soma dos atributos e:%.2f\n", soma01 = populacao + pontos);
+			}
+			if (menu01 == 1 && menu02 == 5) {
+				printf("a soma dos atributos e:%.2f\n", soma01 = populacao + denssidade);
+			}
+			if (menu01 == 2 && menu02 == 1) {
+				printf("a soma dos atributos e:%.2f\n", soma01 = areakm2 + populacao);
+			}
+			if (menu01 == 2 && menu02 == 3) {
+				printf("a soma dos atributos e:%.2f\n", soma01 = areakm2 + pib);
+			}
+			if (menu01 == 2 && menu02 == 4) {
+				printf("a soma dos atributos e:%.2f\n", soma01 = areakm2 + pontos);
+			}
+			if (menu01 == 2 && menu02 == 5) {
+				printf("a soma dos atributos e:%.2f\n", soma01 = areakm2 + denssidade);
+			}
+			if (menu01 == 3 && menu02 == 1) {
+				printf("a soma dos atributos e:%.2f\n", soma01 = pib + populacao);
+			}
+			if (menu01 == 3 && menu02 == 2) {
+				printf("a soma dos atributos e:%.2f\n", soma01 = pib2 + areakm2);
+			}
+			if (menu01 == 3 && menu02 == 4) {
+				printf("a soma dos atributos e:%.2f\n", soma01 = pib + pontos);
+			}
+			if (menu01 == 3 && menu02 == 5) {
+				printf("a soma dos atributos e:%.2f\n", soma01 = pib + denssidade);
+			}
+			if (menu01 == 4 && menu02 == 1) {
+				printf("a soma dos atributos e:%.2f\n", soma01 = pontos + populacao);
+			}
+			if (menu01 == 4 && menu02 == 2) {
+				printf("a soma dos atributos e:%.2f\n", soma01 = pontos + areakm2);
+			}
+			if (menu01 == 4 && menu02 == 3) {
+				printf("a soma dos atributos e:%.2f\n", soma01 = pontos + pib);
+			}
+			if (menu01 == 4 && menu02 == 5) {
+				printf("a soma dos atributos e:%.2f\n", soma01 = pontos + denssidade);
+			}
+			if (menu01 == 5 && menu02 == 1) {
+				printf("a soma dos atributos e:%.2f\n", soma01 = denssidade + populacao);
+			}
+			if (menu01 == 5 && menu02 == 2) {
+				printf("a soma dos atributos e:%.2f\n", soma01 = denssidade + areakm2);
+			}
+			if (menu01 == 5 && menu02 == 3) {
+				printf("a soma dos atributos e:%.2f\n", soma01 = denssidade + pib);
+			}
+			if (menu01 == 5 && menu02 == 4) {
+				printf("a soma dos atributos e:%.2f\n", soma01 = denssidade + pontos);
+			}
 
-				 if (menu02 == 1) {
-					 printf("voce escolheu o atributo populaçao:%d\n", populacao);
-				 }
-				 else if (menu02 == 2) {
-					 printf("voce escolheu o atributo areakm2:%f\n", areakm2);
-				 }
-				 else if (menu02 == 3) {
-					 printf("voce escolheu o atributo pib:%f\n", pib);
-				 }
-				 else if (menu02 == 4) {
-					 printf("voce escolheu o atributo pontos turisticos:%d\n", pontos);
-				 }
-				 else if (menu02 == 5) {
-					 printf("voce escolheu o atributo dessidade demografica:%f\n", denssidade);
-				 }
-				 if (menu01 == 1) {
-					 printf("voce escolheu o atributo populaçao:%d\n", populacao);
-				 }
-				 else if (menu01 == 2) {
-					 printf("voce escolheu o atributo areakm2:%.2f\n", areakm2);
-				 }
-				 else if (menu01 == 3) {
-					 printf("voce escolheu o atributo pib:%.2f\n", pib);
-				 }
-				 else if (menu01 == 4) {
-					 printf("voce escolheu o atributo pontos turisticos:%d\n", pontos);
-				 }
-				 else if (menu01 == 5) {
-					 printf("voce escolheu o atributo denssidade demografica:%f\n", denssidade);
-				 }
-				
-				 printf("\n");
-				 if (pc2 == 1) {
-					 printf("PORTUGAL\n");
-				 }
-				 else if (pc2 == 2) {
-					 printf("ALEMANHA\n");
-				 }
+			printf("\n");
+			if (pc2 == 1) {
+				printf("PORTUGAL\n");
+			}
+			else if (pc2 == 2) {
+				printf("ALEMANHA\n");
+			}
 
-				 else if (pc2 == 3) {
-					 printf("HOLANDA\n");
-				 }
-				
-				 
-				 if (pc == 1) {
-					 printf("o oponete escolheu o atributo populaçao:%d\n",populacao2);
-				 }
-				 else if (pc == 2) {
-					 printf("o oponente escolheu escolheu o atributo areakm2:%.2f\n",areakm22);
-				 }
-				 else if (pc == 3) {
-					 printf("o oponete escolheu o atributo pib:%.2f\n",pib2);
-				 }
-				 else if (pc == 4) {
-					 printf("o oponente escoolheu o atributo numero de pontos turisticos:%d\n",pontos2);
-				 }
-				 else if (pc == 5) {
-					 printf("o oponente escolheu o atributo denssidade demografica:%.2f\n",denssidade2);
-				 }
-				 if (pc1 == 1) {
-					 printf("o oponete escolheu o atributo populaçao:%d\n",populacao2);
-				 }
-				 else if (pc1 == 2) {
-					 printf("o oponente escolheu escolheu o atributo areakm2:%.2f\n",areakm22);
-				 }
-				 else if (pc1 == 3) {
-					 printf("o oponete escolheu o atributo pib:%.2f\n",pib2);
-				 }
-				 else if (pc1 == 4) {
-					 printf("o oponente escoolheu o atributo numero de pontos turisticos:%d\n",pontos2);
-				 }
-				 else if (pc1 == 5) {
-					 printf("o oponente escolheu o atributo denssidade demografica:%.2f\n",denssidade2);
-				 }
-				
-				 printf("\n");
-			 if (denssidade < denssidade2 && populacao > populacao2 || areakm2 > areakm22 || pib >  pib2 ||  pontos > pontos2 || populacao > populacao2 ) {
-				 printf("voce ganhou\n");
-			 }
-			
-			 else if(denssidade == denssidade2 && populacao == populacao2 || areakm2 == areakm22 || pib == pib2 || pontos == pontos2 || populacao == populacao2){
-				 printf("## EMPATE ##");
-			 }
-			 else if (denssidade > denssidade2 && populacao < populacao2 || areakm2 < areakm22 || pib < pib2 || pontos < pontos2 || populacao < populacao2) {
-				 printf("voce perdeu");
-			 }
-			 else {
-				 printf("erro no game");
-			 }
+			else if (pc2 == 3) {
+				printf("HOLANDA\n");
+			}
+
+
+			printf("\n");
+			if (pc == 1) {
+				printf("o oponete escolheu o atributo populaçao:%d\n", populacao2);
+			}
+			else if (pc == 2) {
+				printf("o oponente escolheu escolheu o atributo areakm2:%.2f\n", areakm22);
+			}
+			else if (pc == 3) {
+				printf("o oponete escolheu o atributo pib:%.2f\n", pib2);
+			}
+			else if (pc == 4) {
+				printf("o oponente escoolheu o atributo numero de pontos turisticos:%d\n", pontos2);
+			}
+			else if (pc == 5) {
+				printf("o oponente escolheu o atributo denssidade demografica:%.2f\n", denssidade2);
+			}
+			if (pc1 == 1) {
+				printf("o oponete escolheu o atributo populaçao:%d\n", populacao2);
+			}
+			else if (pc1 == 2) {
+				printf("o oponente escolheu escolheu o atributo areakm2:%.2f\n", areakm22);
+			}
+			else if (pc1 == 3) {
+				printf("o oponete escolheu o atributo pib:%.2f\n", pib2);
+			}
+			else if (pc1 == 4) {
+				printf("o oponente escoolheu o atributo numero de pontos turisticos:%d\n", pontos2);
+			}
+			else if (pc1 == 5) {
+				printf("o oponente escolheu o atributo denssidade demografica:%.2f\n", denssidade2);
+			}
+			if (pc1 == 1 && pc == 2) {
+				printf("a soma dos atributos e:%.2f\n", soma02 = populacao2 + areakm22);
+			}
+			if (pc1 == 1 && pc == 3) {
+				printf("a soma dos atributos e:%.2f\n", soma02 = populacao2 + pib2);
+			}
+			if (pc1 == 1 && pc == 4) {
+				printf("a soma dos atributos e:%.2f\n", soma02 = populacao2 + pontos2);
+			}
+			if (pc1 == 1 && pc == 5) {
+				printf("a soma dos atributos e:%.2f\n", soma02 = populacao2 + denssidade2);
+			}
+			if (pc1 == 2 && pc == 1) {
+				printf("a soma dos atributos e:%.2f\n", soma02 = areakm22 + populacao2);
+			}
+			if (pc1 == 2 && pc == 3) {
+				printf("a soma dos atributos e:%.2f\n", soma02 = areakm22 + pib2);
+			}
+			if (pc1 == 2 && pc == 4) {
+				printf("a soma dos atributos e:%.2f\n", soma02 = areakm22 + pontos2);
+			}
+			if (pc1 == 2 && pc == 5) {
+				printf("a soma dos atributos e:%.2f\n", soma02 = areakm22 + denssidade2);
+			}
+			if (pc1 == 3 && pc == 1) {
+				printf("a soma dos atributos e:%.2f\n", soma02 = pib2 + populacao2);
+			}
+			if (pc1 == 3 && pc == 2) {
+				printf("a soma dos atributos e:%.2f\n", soma02 = pib2 + areakm22);
+			}
+			if (pc1 == 3 && pc == 4) {
+				printf("a soma dos atributos e:%.2f\n", soma02 = pib2 + pontos2);
+			}
+			if (pc1 == 3 && pc == 5) {
+				printf("a soma dos atributos e:%.2f\n", soma02 = pib2 + denssidade2);
+			}
+			if (pc1 == 4 && pc == 1) {
+				printf("a soma dos atributos e:%.2f\n", soma02 = pontos2 + populacao2);
+			}
+			if (pc1 == 4 && pc == 2) {
+				printf("a soma dos atributos e:%.2f\n", soma02 = pontos2 + areakm22);
+			}
+			if (pc1 == 4 && pc == 3) {
+				printf("a soma dos atributos e:%.2f\n", soma02 = pontos2 + pib2);
+			}
+			if (pc1 == 4 && pc == 5) {
+				printf("a soma dos atributos e:%.2f\n", soma02 = pontos2 + denssidade2);
+			}
+			if (pc1 == 5 && pc == 1) {
+				printf("a soma dos atributos e:%.2f\n", soma02 = denssidade2 + populacao2);
+			}
+			if (pc1 == 5 && pc == 2) {
+				printf("a soma dos atributos e:%.2f\n", soma02 = denssidade2 + areakm22);
+			}
+			if (pc1 == 5 && pc == 3) {
+				printf("a soma dos atributos e:%.2f\n", soma02 = denssidade2 + pib2);
+			}
+			if (pc1 == 5 && pc == 4) {
+				printf("a soma dos atributos e:%.2f\n", soma02 = denssidade2 + pontos2);
+			}
+
+
+			printf("\n");
+			if (denssidade < denssidade2 || soma02 < soma01) {
+				printf("voce ganhou\n");
+			}
+			else if (denssidade == denssidade2 && soma02 == soma01) {
+				printf("## EMPATE ##");
+			}
+			else if (denssidade > denssidade2 || soma02 > soma01) {
+				printf("voce perdeu");
+			}
+			else {
+				printf("erro no game");
+			}
+		}
+
+		else{
+
+			printf("\n");
+			printf("%s", nome01);
+			printf("\n");
+
+			if (menu02 == 1) {
+				printf("voce escolheu o atributo populaçao:%d\n", populacao);
+			}
+			else if (menu02 == 2) {
+				printf("voce escolheu o atributo areakm2:%f\n", areakm2);
+			}
+			else if (menu02 == 3) {
+				printf("voce escolheu o atributo pib:%f\n", pib);
+			}
+			else if (menu02 == 4) {
+				printf("voce escolheu o atributo pontos turisticos:%d\n", pontos);
+			}
+			else if (menu02 == 5) {
+				printf("voce escolheu o atributo dessidade demografica:%f\n", denssidade);
+			}
+			if (menu01 == 1) {
+				printf("voce escolheu o atributo populaçao:%d\n", populacao);
+			}
+			else if (menu01 == 2) {
+				printf("voce escolheu o atributo areakm2:%.2f\n", areakm2);
+			}
+			else if (menu01 == 3) {
+				printf("voce escolheu o atributo pib:%.2f\n", pib);
+			}
+			else if (menu01 == 4) {
+				printf("voce escolheu o atributo pontos turisticos:%d\n", pontos);
+			}
+			else if (menu01 == 5) {
+				printf("voce escolheu o atributo denssidade demografica:%f\n", denssidade);
+			}
+			if (menu01 == 1 && menu02 == 2) {
+				printf("a soma dos atributos e:%.2f\n", soma01 = populacao + areakm2);
+			}
+			if (menu01 == 1 && menu02 == 3) {
+				printf("a soma dos atributos e:%.2f\n", soma01 = populacao + pib);
+			}
+			if (menu01 == 1 && menu02 == 4) {
+				printf("a soma dos atributos e:%.2f\n", soma01 = populacao + pontos);
+			}
+			if (menu01 == 1 && menu02 == 5) {
+				printf("a soma dos atributos e:%.2f\n", soma01 = populacao + denssidade);
+			}
+			if (menu01 == 2 && menu02 == 1) {
+				printf("a soma dos atributos e:%.2f\n", soma01 = areakm2 + populacao);
+			}
+			if (menu01 == 2 && menu02 == 3) {
+				printf("a soma dos atributos e:%.2f\n", soma01 = areakm2 + pib);
+			}
+			if (menu01 == 2 && menu02 == 4) {
+				printf("a soma dos atributos e:%.2f\n", soma01 = areakm2 + pontos);
+			}
+			if (menu01 == 2 && menu02 == 5) {
+				printf("a soma dos atributos e:%.2f\n", soma01 = areakm2 + denssidade);
+			}
+			if (menu01 == 3 && menu02 == 1) {
+				printf("a soma dos atributos e:%.2f\n", soma01 = pib + populacao);
+			}
+			if (menu01 == 3 && menu02 == 2) {
+				printf("a soma dos atributos e:%.2f\n", soma01 = pib2 + areakm2);
+			}
+			if (menu01 == 3 && menu02 == 4) {
+				printf("a soma dos atributos e:%.2f\n", soma01 = pib + pontos);
+			}
+			if (menu01 == 3 && menu02 == 5) {
+				printf("a soma dos atributos e:%.2f\n", soma01 = pib + denssidade);
+			}
+			if (menu01 == 4 && menu02 == 1) {
+				printf("a soma dos atributos e:%.2f\n", soma01 = pontos + populacao);
+			}
+			if (menu01 == 4 && menu02 == 2) {
+				printf("a soma dos atributos e:%.2f\n", soma01 = pontos + areakm2);
+			}
+			if (menu01 == 4 && menu02 == 3) {
+				printf("a soma dos atributos e:%.2f\n", soma01 = pontos + pib);
+			}
+			if (menu01 == 4 && menu02 == 5) {
+				printf("a soma dos atributos e:%.2f\n", soma01 = pontos + denssidade);
+			}
+			if (menu01 == 5 && menu02 == 1) {
+				printf("a soma dos atributos e:%.2f\n", soma01 = denssidade + populacao);
+			}
+			if (menu01 == 5 && menu02 == 2) {
+				printf("a soma dos atributos e:%.2f\n", soma01 = denssidade + areakm2);
+			}
+			if (menu01 == 5 && menu02 == 3) {
+				printf("a soma dos atributos e:%.2f\n", soma01 = denssidade + pib);
+			}
+			if (menu01 == 5 && menu02 == 4) {
+				printf("a soma dos atributos e:%.2f\n", soma01 = denssidade + pontos);
+			}
+
+			printf("\n");
+			if (pc2 == 1) {
+				printf("PORTUGAL\n");
+			}
+			else if (pc2 == 2) {
+				printf("ALEMANHA\n");
+			}
+
+			else if (pc2 == 3) {
+				printf("HOLANDA\n");
+			}
+
+
+			printf("\n");
+			if (pc == 1) {
+				printf("o oponete escolheu o atributo populaçao:%d\n", populacao2);
+			}
+			else if (pc == 2) {
+				printf("o oponente escolheu escolheu o atributo areakm2:%.2f\n", areakm22);
+			}
+			else if (pc == 3) {
+				printf("o oponete escolheu o atributo pib:%.2f\n", pib2);
+			}
+			else if (pc == 4) {
+				printf("o oponente escoolheu o atributo numero de pontos turisticos:%d\n", pontos2);
+			}
+			else if (pc == 5) {
+				printf("o oponente escolheu o atributo denssidade demografica:%.2f\n", denssidade2);
+			}
+			if (pc1 == 1) {
+				printf("o oponete escolheu o atributo populaçao:%d\n", populacao2);
+			}
+			else if (pc1 == 2) {
+				printf("o oponente escolheu escolheu o atributo areakm2:%.2f\n", areakm22);
+			}
+			else if (pc1 == 3) {
+				printf("o oponete escolheu o atributo pib:%.2f\n", pib2);
+			}
+			else if (pc1 == 4) {
+				printf("o oponente escoolheu o atributo numero de pontos turisticos:%d\n", pontos2);
+			}
+			else if (pc1 == 5) {
+				printf("o oponente escolheu o atributo denssidade demografica:%.2f\n", denssidade2);
+			}
+			if (pc1 == 1 && pc == 2) {
+				printf("a soma dos atributos e:%.2f\n", soma02 = populacao2 + areakm22);
+			}
+			if (pc1 == 1 && pc == 3) {
+				printf("a soma dos atributos e:%.2f\n", soma02 = populacao2 + pib2);
+			}
+			if (pc1 == 1 && pc == 4) {
+				printf("a soma dos atributos e:%.2f\n", soma02 = populacao2 + pontos2);
+			}
+			if (pc1 == 1 && pc == 5) {
+				printf("a soma dos atributos e:%.2f\n", soma02 = populacao2 + denssidade2);
+			}
+			if (pc1 == 2 && pc == 1) {
+				printf("a soma dos atributos e:%.2f\n", soma02 = areakm22 + populacao2);
+			}
+			if (pc1 == 2 && pc == 3) {
+				printf("a soma dos atributos e:%.2f\n", soma02 = areakm22 + pib2);
+			}
+			if (pc1 == 2 && pc == 4) {
+				printf("a soma dos atributos e:%.2f\n", soma02 = areakm22 + pontos2);
+			}
+			if (pc1 == 2 && pc == 5) {
+				printf("a soma dos atributos e:%.2f\n", soma02 = areakm22 + denssidade2);
+			}
+			if (pc1 == 3 && pc == 1) {
+				printf("a soma dos atributos e:%.2f\n", soma02 = pib2 + populacao2);
+			}
+			if (pc1 == 3 && pc == 2) {
+				printf("a soma dos atributos e:%.2f\n", soma02 = pib2 + areakm22);
+			}
+			if (pc1 == 3 && pc == 4) {
+				printf("a soma dos atributos e:%.2f\n", soma02 = pib2 + pontos2);
+			}
+			if (pc1 == 3 && pc == 5) {
+				printf("a soma dos atributos e:%.2f\n", soma02 = pib2 + denssidade2);
+			}
+			if (pc1 == 4 && pc == 1) {
+				printf("a soma dos atributos e:%.2f\n", soma02 = pontos2 + populacao2);
+			}
+			if (pc1 == 4 && pc == 2) {
+				printf("a soma dos atributos e:%.2f\n", soma02 = pontos2 + areakm22);
+			}
+			if (pc1 == 4 && pc == 3) {
+				printf("a soma dos atributos e:%.2f\n", soma02 = pontos2 + pib2);
+			}
+			if (pc1 == 4 && pc == 5) {
+				printf("a soma dos atributos e:%.2f\n", soma02 = pontos2 + denssidade2);
+			}
+			if (pc1 == 5 && pc == 1) {
+				printf("a soma dos atributos e:%.2f\n", soma02 = denssidade2 + populacao2);
+			}
+			if (pc1 == 5 && pc == 2) {
+				printf("a soma dos atributos e:%.2f\n", soma02 = denssidade2 + areakm22);
+			}
+			if (pc1 == 5 && pc == 3) {
+				printf("a soma dos atributos e:%.2f\n", soma02 = denssidade2 + pib2);
+			}
+			if (pc1 == 5 && pc == 4) {
+				printf("a soma dos atributos e:%.2f\n", soma02 = denssidade2 + pontos2);
+			}
+
+
+			printf("\n");
+			if (denssidade < denssidade2 || soma02 < soma01){
+				printf("voce ganhou\n");
+			}
+			else if (denssidade == denssidade2 && soma02 == soma01){
+				printf("## EMPATE ##");
+			}
+			else if (denssidade > denssidade2 || soma02 > soma01){
+				printf("voce perdeu");
+			}
+			else {
+				printf("erro no game");
+			}
+		}
+
 			break;
 
 
@@ -759,8 +1103,10 @@ int main() {
 	default: {
 		printf("ERRO NO JOGO, VERIFIQUE SE CARACTER QUE VOCE DIGITOU ESTA MINUSCULA PARA O JOGO CONTINUAR!!!\n");
 
-	}
+	    }
 
 		}
 		return 0;
+     
+
 	}
